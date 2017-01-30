@@ -12,6 +12,9 @@
 		8DE03A2E1E3F9B2800B5DEE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE03A2D1E3F9B2800B5DEE3 /* Assets.xcassets */; };
 		8DE03A311E3F9B2800B5DEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE03A2F1E3F9B2800B5DEE3 /* LaunchScreen.storyboard */; };
 		8DE03A391E3F9C1800B5DEE3 /* SubRedditListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A381E3F9C1800B5DEE3 /* SubRedditListTableViewController.swift */; };
+		8DE03A3D1E3F9EAD00B5DEE3 /* Subreddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A3C1E3F9EAD00B5DEE3 /* Subreddit.swift */; };
+		8DE03A3F1E3F9EBA00B5DEE3 /* SubredditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A3E1E3F9EBA00B5DEE3 /* SubredditController.swift */; };
+		8DE03A411E3F9ED400B5DEE3 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A401E3F9ED400B5DEE3 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		8DE03A301E3F9B2800B5DEE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE03A321E3F9B2800B5DEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DE03A381E3F9C1800B5DEE3 /* SubRedditListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubRedditListTableViewController.swift; sourceTree = "<group>"; };
+		8DE03A3C1E3F9EAD00B5DEE3 /* Subreddit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subreddit.swift; sourceTree = "<group>"; };
+		8DE03A3E1E3F9EBA00B5DEE3 /* SubredditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubredditController.swift; sourceTree = "<group>"; };
+		8DE03A401E3F9ED400B5DEE3 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = ../NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,10 @@
 			children = (
 				8DE03A261E3F9B2800B5DEE3 /* AppDelegate.swift */,
 				8DE03A2A1E3F9B2800B5DEE3 /* Main.storyboard */,
+				8DE03A401E3F9ED400B5DEE3 /* NetworkController.swift */,
 				8DE03A381E3F9C1800B5DEE3 /* SubRedditListTableViewController.swift */,
+				8DE03A3C1E3F9EAD00B5DEE3 /* Subreddit.swift */,
+				8DE03A3E1E3F9EBA00B5DEE3 /* SubredditController.swift */,
 				8DE03A2D1E3F9B2800B5DEE3 /* Assets.xcassets */,
 				8DE03A2F1E3F9B2800B5DEE3 /* LaunchScreen.storyboard */,
 				8DE03A321E3F9B2800B5DEE3 /* Info.plist */,
@@ -137,6 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE03A411E3F9ED400B5DEE3 /* NetworkController.swift in Sources */,
+				8DE03A3D1E3F9EAD00B5DEE3 /* Subreddit.swift in Sources */,
+				8DE03A3F1E3F9EBA00B5DEE3 /* SubredditController.swift in Sources */,
 				8DE03A391E3F9C1800B5DEE3 /* SubRedditListTableViewController.swift in Sources */,
 				8DE03A271E3F9B2800B5DEE3 /* AppDelegate.swift in Sources */,
 			);

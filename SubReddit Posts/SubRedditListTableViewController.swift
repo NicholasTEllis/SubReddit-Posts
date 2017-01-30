@@ -7,32 +7,44 @@
 //
 
 import UIKit
+import Foundation
 
-class SubRedditListTableViewController: UITableViewController {
+class SubRedditListTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var searchBarTextField: UISearchBar!
+    
+    var subReddits: [Subreddit] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 0
+        searchBarTextField.delegate = self
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 0
+        return subReddits.count
     }
     
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-
-     
-     return cell
-     }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "subRedditCell", for: indexPath)
+        let subReddit = subReddits[indexPath.row]
+        cell.textLabel?.text = subReddit.title
+        
+        return cell
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBarTextField.text else { return }
+        searchBarTextField.resignFirstResponder()
+        SubredditController.searchSubreddits(query: query, completion: { (subreddits) in
+            self.subReddits = subreddits
+        })
+    }
 }
+
+
